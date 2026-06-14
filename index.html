@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乌萨奇扫雷 - Chiikawa Minesweeper</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🐰 乌萨奇扫雷</h1>
+        
+        <!-- 游戏控制栏 -->
+        <div class="control-bar">
+            <div class="difficulty-selector">
+                <button class="difficulty-btn active" data-difficulty="beginner">初级</button>
+                <button class="difficulty-btn" data-difficulty="intermediate">中级</button>
+                <button class="difficulty-btn" data-difficulty="expert">高级</button>
+            </div>
+            
+            <div class="game-info">
+                <div class="mine-counter">
+                    <span class="info-label">💣</span>
+                    <span id="mine-count">10</span>
+                </div>
+                
+                <button id="reset-btn" class="reset-btn">😊</button>
+                
+                <div class="timer">
+                    <span class="info-label">⏱️</span>
+                    <span id="timer">000</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 游戏棋盘 -->
+        <div id="game-board" class="game-board"></div>
+        
+        <!-- 游戏状态提示 -->
+        <div id="game-status" class="game-status"></div>
+        
+        <!-- 操作说明 -->
+        <div class="instructions">
+            <p>🖱️ <strong>左键</strong>：揭开格子</p>
+            <p>🖱️ <strong>右键</strong>：标记乌萨奇的位置</p>
+            <p>🎯 <strong>目标</strong>：保护所有乌萨奇，揭开安全格子</p>
+            <p>🐰 <strong>提示</strong>：数字表示周围有多少只乌萨奇</p>
+        </div>
+    </div>
+    
+    <script src="sound.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
